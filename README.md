@@ -1,1 +1,64 @@
-# the-shell
+# the shell
+
+## Your mission
+
+You will continue the work you started last week with the minish. Your mission over the next 3 weeks is to implement additional functionalities to make your shell as usable as possible... but be careful to keep your program stable at all times!
+
+I cannot stress this enough: **your shell must be perfectly stable and never crash!** Don't bother adding new functionalities if your base is not solid, you won't get any points.
+
+There are also two main organisational constraints for this project:
+
+You will have to respect a proper Gitflow (see below)
+You won't have any Sentinel credits. It's up to you to develop enough tests (either automated test scripts or test cases that you run by hand) to ensure your shell is stable.
+
+Your program will be called `intek-sh.py` and be present at the root of your git repository. You are free to organise your repository however you like and have as many files as necessary.
+
+
+## Gitflow
+
+The rules are simple enough. You will have three types of branches:
+
+* The `master` branch is for the "releases". You will have to do one release for the peer review, and one final for the staff review. The releases must absolutely be stable!
+* A `develop` branch for integrating all features and preparing the releases.
+* As many feature branches as necessary. Each feature must have its own branch. Each feature branch will have to be tested extensively and be stable before being merged into the `develop` branch.
+
+**All branches will be checked during the review** to ensure you followed the process, so don't delete your features branches after merging them into the develop branch.
+
+Each feature branch must have a self-descriptive name.
+
+For more information on Gitflow, you might refer to this:
+
+https://datasift.github.io/gitflow/IntroducingGitFlow.html
+
+
+## The features
+
+First, that's a given, your shell has to respect all the rules of the minish. That's kind of the starting point.
+
+Now, here is the list of features you may add, with an estimation of their difficulty:
+
+* globbing ★✩✩✩
+* path expansions (tilde expansions, parameter expansions) ★✩✩✩
+* pipes & the redirections >, <, >> and << ★★★✩
+* handling the exit status of commands ★✩✩✩
+* command substitution with the backquotes ★★✩✩
+logical operators && and || * ★★✩✩
+* signals handling ★★✩✩
+* subshells with () ★★✩✩
+* quoting (quotes & escape characters) ★✩✩✩
+* command-line edition with the curses module (being able to move the cursor with arrows left & right to edit some part of the line, key combination of your choice to go at the beginning & at the end of the line, arrows up & down to move inside the history...) ★★★✩
+* the command history with the builtins history and ! ★★✩✩
+* dynamic command completion ★★✩✩
+
+You have to pick *at least* 6 of those features and implement them. The more the better... **as long as everything's stable!**
+
+
+## The Bible
+
+`bash` will be your shell of reference. If you don't know how something works, the outputs, the error messages... test it on bash!
+
+Here's an exhaustive reference describing the POSIX standard for the shell language: http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html
+
+Don't worry if most of it flies over your head, you don't have to read it all, you can just use it to understand the features you want to implement.
+
+And don't forget to exchange a lot with your fellow students! There are features you won't implement that you can still discover through other students. Also, don't hesitate to ask if you have any questions.
