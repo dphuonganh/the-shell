@@ -62,3 +62,28 @@ Here's an exhaustive reference describing the POSIX standard for the shell langu
 Don't worry if most of it flies over your head, you don't have to read it all, you can just use it to understand the features you want to implement.
 
 And don't forget to exchange a lot with your fellow students! There are features you won't implement that you can still discover through other students. Also, don't hesitate to ask if you have any questions.
+
+
+## BONUSES
+
+# Should you do bonuses?
+
+The following bonuses are difficult to implement, either because there are many special cases (job control, I'm looking at you) or because they have an heavy influence on the design of the project, with no guarantee that you'll finish them on time (that's for the shell script).
+
+But they are also extremely gratifying. Implementing the shell script is very rewarding as you touch at the essence of programming languages, and job control is quite satisfying as you get to really understand how the system orchestrates processes.
+
+I encourage you to consider those bonuses if you want a good challenge, though you need to be very careful in the way you design your program. You don't want to end up with an unstable shell because those features are half-finished!
+
+## Job control ★★★★
+
+Implement job control with the operator `&` and the builtins `jobs, fg, bg`.
+
+Job control implies some special handling for compound commands (pipes, subshells...) & affects signals handling as well, so you need to have those implemented and stable first. There's not a lot of code to produce, but a really good understanding of system internals is required.
+
+## Shell script ★★★★
+
+To implement shell script, you need to handle the POSIX shell grammar. You'll need to research how to generate an abstract syntax tree (lexing and parsing will give you one!), and you will need to code the execution of that AST.
+
+The raw difficulty probably lies around the concept of lexing and parsing. You can use tools like Lex & Yacc to abstract that difficulty if you are short on time, though building your own lexer & parser would be pretty cool.
+
+The second difficulty is that it's harder to test the execution without having the AST, so it might be difficult to build the AST and code its execution in parallel.
